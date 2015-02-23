@@ -1,27 +1,63 @@
 @import "normalize.styl"
+@import "fonts.styl"
+
 gris_oscuro = #333333
 gris_claro = #818181
+rojo = #BD255B
+
 a
 	text-decoration none
+
 body
 	font-size 16px
 	font-family 'Varela Round', sans-serif
+img
+	vertical-align top
 figure
 	margin 0
+
 .author
 	color gris_claro
-//boton menu
+.action
+	color white
+	font-size 1.2em
+	margin-right 0.5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_oscuro
+.actions
+	background rgba(black,.3)
+	bottom 0
+	left 0
+	right 0
+	position absolute
 .button-menu
+	color gris_oscuro
 	left .5em
 	margin-top -10px
 	position absolute
 	top 50%
+
 .border-bottom
 	border-bottom 1px solid gris_claro
+
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
 .container
 	font-size 0
 	padding 1.4rem
 	text-align center
+
+.description
+	.name
+		color gris_oscuro
+		font-size 1.3em
+		margin-bottom 0
+	.author
+		margin-top 0
 .header
 	height 3.5em
 	.title
@@ -29,13 +65,54 @@ figure
 		text-align center
 		margin 0
 		line-height 3.5em
+
 .name
-	color gris_oscuro
+	color gris_claro
+
 .menu
 	display none
-//clase relativa
+
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.progress
+	margin 1em 0
+	position relative
+	.min
+	.max
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	.state
+		background rojo
+		border-radius 5px
+		height 5px
+		position relative
+		width 30%
+	.circle
+		background gris_oscuro
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+.right-text
+	text-align right
 .relative
 	position relative
+
 .song
 	display inline-block
 	font-size 1rem
@@ -47,3 +124,6 @@ figure
 		margin-right 0
 	p
 		margin .5em 0
+.playing
+	&.small
+		width 20em
