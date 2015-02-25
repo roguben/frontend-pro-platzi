@@ -1,3 +1,4 @@
+@import "nib"
 @import "normalize.styl"
 @import "fonts.styl"
 
@@ -95,14 +96,27 @@ ul
 		height 5px
 		position relative
 		width 30%
+		animation 10s state infinite linear
 	.circle
 		background gris_oscuro
-		//border-radius 50%
 		height 10px
 		position absolute
 		right 0
 		top -2px
 		width 10px
+		animation 1s circle infinite
+
+@keyframes state
+	0%
+		width 0%
+	100%
+		width 100%
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(1.5)
+		opacity 0
 .search-icon
 	color gris_claro
 	left .5em
@@ -128,7 +142,58 @@ ul
 .playing
 	&.small
 		width 20em
+		margin 0 auto
+.isotipo
+	width 122px
+.logo
+	display none
+	background white
+	overflow hidden
+	padding 1.3em 0
+.avatar
+	width 38px
+	height 38px
+.username
+	color gris_claro
+	position absolute
+	top 2em
+	margin-left .5em
+	&:after
+		border-left 7px solid transparent
+		border-right 7px solid transparent
+		border-top 7px solid gris_claro
+		content ""
+		display inline-block
+		margin-left .4em
+.playlist
+		display none
+		border-left 1px solid gris_claro
+		width 22em
+		padding 0 2em
+		.list
+			list-style none
+		.item
+			padding 1em 0
+		.action
+			font-size .9em
 
+.menu
+	display none
+	background gris_mas_claro
+	overflow hidden
+	border-top 1px solid gris_claro
+	.item
+		float left
+		list-style none
+		a
+			border-top 5px solid transparent
+			color gris_oscuro
+			cursor pointer
+			display block
+			padding 1em
+			text-transform uppercase
+			&:hover
+				border-top 5px solid gris_claro
 /*clases utilitarias*/
 .border-bottom
 	border-bottom 1px solid gris_claro
@@ -155,8 +220,6 @@ ul
 .wrap
 	width 1000px
 /*fin de clases utilitarias*/
-
-
 		
 @media screen and (min-width: 480px)
 	.song
@@ -169,6 +232,7 @@ ul
 	.playing
 		&.medium
 			width auto
+
 @media screen and (min-width: 1000px)
 	body
 		background gris_mas_claro
@@ -176,42 +240,21 @@ ul
 		display none
 	.header
 		height auto
+		border none
 		.title
-			display none	
-	.isotipo
-		width 122px
+			display none
 	.logo
-		background white
-		overflow hidden
-		padding 1.3em 0
-	.avatar
-		width 38px
-		height 38px
+	.playlist
 	.menu
 		display block
-		background gris_mas_claro
-		overflow hidden
-		.item
-			float left
-			list-style none
-			a
-				border-top 5px solid transparent
-				color gris_oscuro
-				cursor pointer
-				display block
-				padding 1em
-				text-transform uppercase
-				&:hover
-					border-top 5px solid gris_claro
-	.username
-		color gris_claro
-		position absolute
-		top 2em
-		margin-left .5em
-		&:after
-			border-left 7px solid transparent
-			border-right 7px solid transparent
-			border-top 7px solid gris_claro
-			content ""
-			display inline-block
-			margin-left .4em
+	.music
+		width 32.5em
+		float left
+		.description
+			display none
+	.playing
+		padding-top 1.3em
+		&.large
+			margin 0 auto
+			width 62.5em
+			overflow hidden
