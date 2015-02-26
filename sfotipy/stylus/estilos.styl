@@ -2,11 +2,16 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
+/*VARIABLES*/
+
 gris_oscuro = #333333
 gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
 
+/*--------------------------------------------*/
+
+/*Generales*/
 a
 	text-decoration none
 
@@ -20,33 +25,80 @@ figure
 ul
 	margin 0
 	padding 0
+/*--------------------------------------------*/
 
-.author
-	color gris_claro
-.action
-	color white
-	font-size 1.2em
-	margin-right 0.5em
-	&:last-child
-		margin-right 0
-	&.gray
-		color gris_claro
-.actions
-	background rgba(black,.3)
-	bottom 0
-	left 0
-	right 0
-	position absolute
+/*HEADER*/
+.avatar
+	height 38px
+	width 38px
 .button-menu
 	color gris_oscuro
 	left .5em
 	margin-top -10px
 	position absolute
 	top 50%
-.container
-	font-size 0
-	padding 1.4rem
-	text-align center
+.close-icon
+	color gris_claro
+	font-size 1.2em
+	position absolute
+	right .5em
+	top .5em
+.header
+	height 3.5em
+	.title
+		font-size 1.1em
+		line-height 3.5em
+		margin 0
+		text-align center
+.input 
+	border 1px solid gris_claro
+	border-radius 5px
+	height 2.5em
+	padding 0 1em 0 2em
+.isotipo
+	width 122px
+.logo
+	background white
+	display none
+	overflow hidden
+	padding 1.3em 0
+.menu
+	background gris_mas_claro
+	border-top 1px solid gris_claro
+	display none
+	overflow hidden
+	.item
+		float left
+		list-style none
+		a
+			border-top 5px solid transparent
+			color gris_oscuro
+			cursor pointer
+			display block
+			padding 1em
+			text-transform uppercase
+			&:hover
+				border-top 5px solid gris_claro
+.search-icon
+	color gris_claro
+	left .5em
+	position absolute
+	top .8em
+.username
+	color gris_claro
+	margin-left .5em
+	position absolute
+	top 2em
+	&:after
+		border-left 7px solid transparent
+		border-right 7px solid transparent
+		border-top 7px solid gris_claro
+		content ""
+		display inline-block
+		margin-left .4em
+/*-----------------------------------------------------*/
+
+/*PLAYING*/
 .description
 	.name
 		color gris_oscuro
@@ -54,24 +106,21 @@ ul
 		margin-bottom 0
 	.author
 		margin-top 0
-.header
-	height 3.5em
-	.title
-		font-size 1.1em
-		text-align center
-		margin 0
-		line-height 3.5em
-.input 
-	border 1px solid gris_claro
-	height 2.5em
-	border-radius 5px
-	padding 0 1em 0 2em
-.name
-	color gris_claro
-
-.menu
-	display none
-
+.playing
+	&.small
+		width 20em
+		margin 0 auto
+.playlist
+		display none
+		border-left 1px solid gris_claro
+		width 22em
+		padding 0 2em
+		.list
+			list-style none
+		.item
+			padding 1em 0
+		.action
+			font-size .9em
 .progress
 	margin 1em 0
 	position relative
@@ -117,17 +166,31 @@ ul
 	100%
 		transform scale(1.5)
 		opacity 0
-.search-icon
-	color gris_claro
-	left .5em
-	position absolute
-	top .8em
-.close-icon
-	color gris_claro
+/*-----------------------------------------------------*/
+
+/*ACTIONS BUTTONS*/
+.action
+	color white
 	font-size 1.2em
+	margin-right 0.5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_claro
+.actions
+	background rgba(black,.3)
+	bottom 0
+	left 0
+	right 0
 	position absolute
-	right .5em
-	top .5em
+/*-----------------------------------------------------*/
+
+/*CONTAINER*/
+.container
+	font-size 0
+	padding 1.4rem
+	text-align center
+	display block
 .song
 	display inline-block
 	font-size 1rem
@@ -139,61 +202,15 @@ ul
 		margin-right 0
 	p
 		margin .5em 0
-.playing
-	&.small
-		width 20em
-		margin 0 auto
-.isotipo
-	width 122px
-.logo
-	display none
-	background white
-	overflow hidden
-	padding 1.3em 0
-.avatar
-	width 38px
-	height 38px
-.username
-	color gris_claro
-	position absolute
-	top 2em
-	margin-left .5em
-	&:after
-		border-left 7px solid transparent
-		border-right 7px solid transparent
-		border-top 7px solid gris_claro
-		content ""
-		display inline-block
-		margin-left .4em
-.playlist
-		display none
-		border-left 1px solid gris_claro
-		width 22em
-		padding 0 2em
-		.list
-			list-style none
-		.item
-			padding 1em 0
-		.action
-			font-size .9em
 
-.menu
-	display none
-	background gris_mas_claro
-	overflow hidden
-	border-top 1px solid gris_claro
-	.item
-		float left
-		list-style none
-		a
-			border-top 5px solid transparent
-			color gris_oscuro
-			cursor pointer
-			display block
-			padding 1em
-			text-transform uppercase
-			&:hover
-				border-top 5px solid gris_claro
+/*-----------------------------------------------------*/
+
+.author
+	color gris_claro
+.name
+	color gris_claro
+
+
 /*clases utilitarias*/
 .border-bottom
 	border-bottom 1px solid gris_claro
@@ -219,8 +236,9 @@ ul
 	overflow hidden
 .wrap
 	width 1000px
-/*fin de clases utilitarias*/
+/*-------------------------------------------------------*/
 		
+/*MEDIA QUERIES*/
 @media screen and (min-width: 480px)
 	.song
 		&:nth-child(even)
@@ -258,3 +276,4 @@ ul
 			margin 0 auto
 			width 62.5em
 			overflow hidden
+/*-------------------------------------------------------*/
