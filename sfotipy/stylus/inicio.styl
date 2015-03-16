@@ -11,6 +11,14 @@ figure
 	margin 0
 span
 	color white
+h2
+	color gris_oscuro
+	font-weight normal
+img
+	vertical-align top
+p
+	color gris_claro
+	font-size 1.2em
 /*welcome*/
 .cover
 	background-image url('../img/background.png')
@@ -24,24 +32,24 @@ span
 		font-size 1.4em
 		pading 0
 		margin 0 2em 2em 2em
-.logo
-	margin 6em 0 2em 0
+	.logo
+		margin 6em 0 2em 0
 .btn
 	display block
 	color white
 	text-decoration none
 	padding 1em
 	margin 0.5em 3.5em
-	border-radius 5px
+	border-radius 3px
 .twitter
 	background #55ACEE
 .facebook
 	background #3D5A98
 .icon-fc
 .icon-tw
-	margin 0 0.5em 0 1em
+	margin 0 0.5em 0 0.5em
 	font-size 1.3em
-	padding 0 0.5em 0.3em 0
+	padding 0 0.3em 0.3em 0
 	position absolute
 	left 0
 	top 20%
@@ -61,8 +69,49 @@ span
 		border-right 2px solid gris_claro
 		padding  0 2em
 /*----------------------*/
+/*FOOTER*/
+footer
+	background #333333
+	width 100%
+	height auto
+	overflow hidden
+	& a
+		display inline-block
+		color white
+		margin 1em
+.footer-logo
+	text-decoration none
+	font-size 1.5em
+	margin 0.5em 0 0.5em 1em
+/*----------------------*/
+.start
+	color gris_claro
+	border-top 1px solid gris_claro
+	margin 1em 0.5em
+	padding-top 0.5em
+.image
+	img
+		width 100%
+		height auto
 .wrap
 	margin 0 auto
 	text-align center
 .relative
 	position relative
+.right
+	float right
+.left
+	float left
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 480px)
+	.cover
+		& .logo
+			width 355px
+			height auto
+		& .title
+			font-size 1.8em
+		& .btn
+			padding 1em 0.5em
+			margin 0.5em 5em
+/*-----------------------*/
