@@ -1,0 +1,68 @@
+@import "nib"
+@import "normalize.styl"
+@import "fonts.styl"
+
+gris_oscuro = #333333
+gris_claro = #818181
+rojo = #BD255B
+gris_mas_claro = #F0F0F0
+/*generales*/
+figure
+	margin 0
+span
+	color white
+/*welcome*/
+.cover
+	background-image url('../img/background.png')
+	background-repeat no-repeat
+	background-size cover
+	background-origin content-box
+	min-height 500px
+	& p
+		color white
+	& .title
+		font-size 1.4em
+		pading 0
+		margin 0 2em 2em 2em
+.logo
+	margin 6em 0 2em 0
+.btn
+	display block
+	color white
+	text-decoration none
+	padding 1em
+	margin 0.5em 3.5em
+	border-radius 5px
+.twitter
+	background #55ACEE
+.facebook
+	background #3D5A98
+.icon-fc
+.icon-tw
+	margin 0 0.5em 0 1em
+	font-size 1.3em
+	padding 0 0.5em 0.3em 0
+	position absolute
+	left 0
+	top 20%
+	float left
+.icon-fc
+	border-right 2px solid #273586
+.icon-tw
+	border-right 2px solid #0099CC
+.login
+	margin 1em 0 4em
+	padding-top 0.3em
+	& .login-link
+		color gris_claro
+		font-size 1.5em
+		padding-left 1em
+	& :first-child
+		border-right 2px solid gris_claro
+		padding  0 2em
+/*----------------------*/
+.wrap
+	margin 0 auto
+	text-align center
+.relative
+	position relative
