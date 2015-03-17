@@ -23,7 +23,7 @@ p
 .cover
 	background-image url('../img/background.png')
 	background-repeat no-repeat
-	background-size cover
+	background-size 100% 100%
 	background-origin content-box
 	min-height 500px
 	& p
@@ -41,29 +41,26 @@ p
 	padding 1em
 	margin 0.5em 3.5em
 	border-radius 3px
+	text-align left
 .twitter
 	background #55ACEE
 .facebook
 	background #3D5A98
 .icon-fc
 .icon-tw
-	margin 0 0.5em 0 0.5em
-	font-size 1.3em
-	padding 0 0.3em 0.3em 0
-	position absolute
-	left 0
-	top 20%
-	float left
+	margin-right .5em
+	font-size 1.5em
+	padding .2em .5em .3em 0
 .icon-fc
-	border-right 2px solid #273586
+	border-right 3px solid #273586
 .icon-tw
-	border-right 2px solid #0099CC
+	border-right 3px solid #0099CC
 .login
 	margin 1em 0 4em
 	padding-top 0.3em
 	& .login-link
 		color gris_claro
-		font-size 1.5em
+		//font-size 1.5em
 		padding-left 1em
 	& :first-child
 		border-right 2px solid gris_claro
@@ -107,11 +104,10 @@ footer
 @media screen and (min-width: 480px)
 	.cover
 		& .logo
-			width 355px
+			width 395px
 			height auto
 		& .title
 			font-size 1.8em
 		& .btn
-			padding 1em 0.5em
-			margin 0.5em 5em
+			margin 0.5em 6em
 /*-----------------------*/
