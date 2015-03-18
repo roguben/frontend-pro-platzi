@@ -24,8 +24,7 @@ p
 	background-image url('../img/background.png')
 	background-repeat no-repeat
 	background-size 100% 100%
-	background-origin content-box
-	min-height 500px
+	padding-bottom 4em
 	& p
 		color white
 	& .title
@@ -52,19 +51,19 @@ p
 	font-size 1.5em
 	padding .2em .5em .3em 0
 .icon-fc
-	border-right 3px solid #273586
+	border-right 2px solid #273586
 .icon-tw
-	border-right 3px solid #0099CC
+	border-right 2px solid #0099CC
 .login
 	margin 1em 0 4em
-	padding-top 0.3em
+	padding-top 0.5em
 	& .login-link
 		color gris_claro
 		//font-size 1.5em
 		padding-left 1em
 	& :first-child
-		border-right 2px solid gris_claro
-		padding  0 2em
+		border-right 1px solid gris_mas_claro
+		padding  1em 2em
 /*----------------------*/
 /*FOOTER*/
 footer
@@ -79,7 +78,10 @@ footer
 .footer-logo
 	text-decoration none
 	font-size 1.5em
-	margin 0.5em 0 0.5em 1em
+	margin 0.5em 0.5em 0.5em 1em
+.footer-link
+	display inline
+	float right
 /*----------------------*/
 .start
 	color gris_claro
@@ -110,4 +112,7 @@ footer
 			font-size 1.8em
 		& .btn
 			margin 0.5em 6em
+	footer
+		& .footer-link
+			float left
 /*-----------------------*/
