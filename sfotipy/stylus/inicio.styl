@@ -7,6 +7,10 @@ gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
 /*generales*/
+body
+	font-size 16px
+	margin 0 auto
+	text-align center
 figure
 	margin 0
 span
@@ -31,8 +35,8 @@ p
 		font-size 1.4em
 		pading 0
 		margin 0 2em 2em 2em
-	.logo
-		margin 6em 0 2em 0
+	.cover-logo
+		padding 6em 0 2em 0
 .btn
 	display block
 	color white
@@ -62,7 +66,7 @@ p
 		//font-size 1.5em
 		padding-left 1em
 	& :first-child
-		border-right 1px solid gris_mas_claro
+		border-right 1px solid gris_claro
 		padding  1em 2em
 /*----------------------*/
 /*FOOTER*/
@@ -92,9 +96,6 @@ footer
 	img
 		width 100%
 		height auto
-.wrap
-	margin 0 auto
-	text-align center
 .relative
 	position relative
 .right
@@ -115,4 +116,7 @@ footer
 	footer
 		& .footer-link
 			float left
+@media screen and (min-width: 1000px)
+	.wrap
+		margin 0 10em
 /*-----------------------*/
