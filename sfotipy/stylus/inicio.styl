@@ -7,112 +7,189 @@ gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
 /*generales*/
+body
+	font-size 16px
 figure
 	margin 0
 span
 	color white
-h2
-	color gris_oscuro
-	font-weight normal
 img
 	vertical-align top
-p
-	color gris_claro
-	font-size 1.2em
-/*welcome*/
+.center-block
+	margin 0 auto
+.small
+	max-width 480px
+.left
+	float left
+.relative
+	position relative
+/*COVER*/
 .cover
-	background-image url('../img/background.png')
-	background-repeat no-repeat
-	background-size 100% 100%
+	background url('../img/fondo.jpg') 100% 100%
 	padding-bottom 4em
-	& p
-		color white
-	& .title
-		font-size 1.4em
-		pading 0
-		margin 0 2em 2em 2em
-	.logo
-		margin 6em 0 2em 0
+	padding-top 2em
+.image img
+	width 100%
+	height auto
+.cover-logo
+	width 10em
+.title
+	color white
+	text-align center
+	font-weight normal
+	font-size 1em
+	width 12em
+	margin-top .5em
+	margin-bottom 1em
 .btn
 	display block
 	color white
 	text-decoration none
-	padding 1em
-	margin 0.5em 3.5em
-	border-radius 3px
 	text-align left
+	width 14em
+	padding 1em .5em 1em 1em
+	margin-bottom 0.5em
+	border-radius 3px
 .twitter
 	background #55ACEE
 .facebook
 	background #3D5A98
-.icon-fc
-.icon-tw
-	margin-right .5em
-	font-size 1.5em
-	padding .2em .5em .3em 0
-.icon-fc
+.fb-icon,
+.tw-icon
+	padding .5em .8em .5em 0
+	font-size 1.2em
+	margin-right .2em
+.fb-icon
 	border-right 2px solid #273586
-.icon-tw
+.tw-icon
 	border-right 2px solid #0099CC
-.login
-	margin 1em 0 4em
-	padding-top 0.5em
-	& .login-link
-		color gris_claro
-		//font-size 1.5em
-		padding-left 1em
-	& :first-child
-		border-right 1px solid gris_mas_claro
-		padding  1em 2em
-/*----------------------*/
+.span-create
+	display none	
+/*-----------------------------------------*/
+/*ACCOUNT*/
+.account
+	margin-top 1em
+	margin-bottom 2em
+	width 15em
+.account a
+	padding .5em 0 .5em 1em
+	color #818181
+.account a:first-child
+	border-right 1px solid #818181
+	padding-right 3em
+/*-----------------------------------------*/
+/*LISTEN SHARE CREATE*/
+h2,
+p,
+h3
+	text-align center
+	font-weight normal
+h2,
+h3
+	color gris_oscuro
+p
+	color gris_claro
+h2
+	font-size 1.2em
+	margin .5em .5em 2em .5em
+	padding-top 1em
+	border-top 1px solid gris_claro
+	color gris_claro
+/*-----------------------------------------*/
 /*FOOTER*/
-footer
+.footer
 	background #333333
-	width 100%
-	height auto
+	padding 1em 0 1em 2em
 	overflow hidden
-	& a
-		display inline-block
-		color white
-		margin 1em
-.footer-logo
-	text-decoration none
-	font-size 1.5em
-	margin 0.5em 0.5em 0.5em 1em
 .footer-link
 	display inline
+.footer-link a
+	color white
 	float right
-/*----------------------*/
-.start
-	color gris_claro
-	border-top 1px solid gris_claro
-	margin 1em 0.5em
-	padding-top 0.5em
-.image
-	img
-		width 100%
-		height auto
-.wrap
-	margin 0 auto
-	text-align center
-.relative
-	position relative
-.right
-	float right
-.left
-	float left
-
+	padding-right 1em
+	text-align right
+.footer-icon
+	color white
+	font-size 1.5em
+/*-----------------------------------------*/
 /*MEDIA QUERIES*/
-@media screen and (min-width: 480px)
+@media screen and (min-width 480px)
+	.medium
+		max-width 1000px
+
+	.footer span
+		padding-right 1em
+
+	.footer-link
+		float left
+
 	.cover
-		& .logo
-			width 395px
-			height auto
+		padding-top 10em
+		padding-bottom 2em
+
+	.cover-logo
+		width 19em
+
+	.cover-logo img
+		width 320px
+		height auto
+
+	.create h2
+		display none
+
+	.create p
+		margin-bottom 4em
+
+	.title
+		font-size 2em
+
+	.btn
+		width 16em
+		font-size 1.2em
+
+	.fb-icon,
+	.tw-icon		
+		margin-right .5em
+
+	.account
+		font-size 1.5em
+
+	p
+		font-size 1.5em
+
+	h3
+		font-size 2em
+
+@media screen and (min-width 1000px)
+	.large
+		max-width 100%
+	.cover-logo
+		position absolute
+		left 195px
+		top 16px
+		& img
+			width 227px
+	.cover
+		padding-top 8em
+		padding-bottom 6em
+		.span-create
+			display block
+			width 12em
+			padding .5em
+			font-size 1em
 		& .title
-			font-size 1.8em
-		& .btn
-			margin 0.5em 6em
-	footer
-		& .footer-link
-			float left
-/*-----------------------*/
+			font-size 3em
+			width 14em
+	.account
+		margin 0
+		& a
+			position absolute
+			color #CC2F6F
+		& a:first-child
+			right 195px
+			top 16px
+			border-right none
+		& a:last-child
+			top 450px
+			left 46%
+/*-----------------------------------------*/
